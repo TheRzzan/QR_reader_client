@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
         camera.setPreviewCallback(new CamEvent(textView_result));
 
         frameLayout.addView(cameraPreview); //This means the camera preview is added in the frame layout UI element to show image
+        button_scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                secondStart();
+            }
+        });
     }
 
     private void initElements(){
@@ -47,5 +53,16 @@ public class MainActivity extends AppCompatActivity {
         Camera.Parameters camPara = camera.getParameters(); //to get camera configurations
         camPara.setFocusMode(Camera.Parameters.FOCUS_MODE_CONTINUOUS_PICTURE); //change it to auto focus
         camera.setParameters(camPara); //set the camera to new parameters
+    }
+
+    private void secondStart(){
+        try {
+            camera.stopPreview();
+        }catch (Exception e){
+            //Ignore: tried to stop non-existent preview
+        }
+
+        camera.setPreviewCallback(new CamEvent(textView_result));
+        camera.startPreview();
     }
 }
