@@ -4,6 +4,7 @@ import android.content.Context;
 import android.hardware.Camera;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -34,9 +35,33 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
+    public void refreshCamera(Camera camera){
+        if(mHold.getSurface() == null){
+            //preview surface does not exist
+            return;
+        }
+
+        //Stop preview before making change
+        try {
+            camera.stopPreview();
+        }catch (Exception e){
+            //Ignore: tried to stop non-existent preview
+        }
+
+        //Set preview size and make any resize, rotate or reformatting changes here
+        //Start preview with new settings
+        cam  = camera;
+        try {
+            cam.setPreviewDisplay(mHold);
+            cam.startPreview();
+        }catch (Exception e){
+            Toast.makeText( getContext(), "Error starting camera preview: ", Toast.LENGTH_SHORT).show();
+        }
+    }
+
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
+        //refreshCamera(cam);
     }
 
     @Override
