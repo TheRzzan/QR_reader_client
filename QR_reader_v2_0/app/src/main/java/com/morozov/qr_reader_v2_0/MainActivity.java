@@ -1,5 +1,6 @@
 package com.morozov.qr_reader_v2_0;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.hardware.Camera;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +14,9 @@ public class MainActivity extends AppCompatActivity {
     private Camera camera;
     private FrameLayout frameLayout;
     private Button button_scan;
+    private Button button_login;
     private TextView textView_result;
+    private String USER_NAME = "EMPTY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 initialize();
+            }
+        });
+        button_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, UsernameActivity.class);
+                startActivityForResult(intent, 1);
             }
         });
     }
@@ -45,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initElements(){
         button_scan = (Button)findViewById(R.id.button_scan);
+        button_scan.setEnabled(false);
+
+        button_login = (Button)findViewById(R.id.button_login);
+
         textView_result = (TextView)findViewById(R.id.textView_result);
         frameLayout = (FrameLayout)findViewById(R.id.FL_camera);
 
@@ -64,5 +78,13 @@ public class MainActivity extends AppCompatActivity {
 
         camera.setPreviewCallback(new CamEvent(textView_result));
         camera.startPreview();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (data == null) {return;}
+        USER_NAME = data.getStringExtra("USER_NAME");
+        textView_result.setText("User name: " + USER_NAME);
+        button_scan.setEnabled(true);
     }
 }
