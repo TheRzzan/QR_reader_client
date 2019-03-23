@@ -51,7 +51,9 @@ public class CamEvent implements Camera.PreviewCallback {
             }
 
             //Do something
-            textView_result.setText(value);
+            //textView_result.setText(value);
+            HttpRequest httpRequest = new HttpRequest(textView_result);
+            httpRequest.execute();
 
             camera.setPreviewCallback(null);
             camera.stopPreview(); //To stop camera after finish scanning.
