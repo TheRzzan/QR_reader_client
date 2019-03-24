@@ -52,7 +52,7 @@ public class CamEvent implements Camera.PreviewCallback {
 
             //Do something
             //textView_result.setText(value);
-            HttpRequest httpRequest = new HttpRequest(textView_result);
+            HttpRequest httpRequest = new HttpRequest(textView_result, value);
             httpRequest.execute();
 
             camera.setPreviewCallback(null);
