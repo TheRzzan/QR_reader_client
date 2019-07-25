@@ -1,4 +1,4 @@
-package com.morozov.qr_reader_v2_0;
+package com.morozov.qr_reader;
 
 import org.junit.Test;
 

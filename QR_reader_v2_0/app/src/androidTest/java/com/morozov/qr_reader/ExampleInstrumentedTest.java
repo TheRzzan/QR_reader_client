@@ -1,4 +1,4 @@
-package com.morozov.qr_reader_v2_0;
+package com.morozov.qr_reader;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.morozov.qr_reader_v2_0", appContext.getPackageName());
+        assertEquals("com.morozov.qr_reader", appContext.getPackageName());
     }
 }

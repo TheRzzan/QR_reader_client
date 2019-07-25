@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="@string/pref_age_key"
+        android:title="@string/pref_age_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_id_key"
+        android:title="@string/pref_id_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_code_ticket_key"
+        android:title="@string/pref_code_ticket_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_date_key"
+        android:title="@string/pref_date_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_promo_key"
+        android:title="@string/pref_promo_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_uni_key"
+        android:title="@string/pref_uni_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_event_key"
+        android:title="@string/pref_event_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_date_event_key"
+        android:title="@string/pref_date_event_title" />
+    <CheckBoxPreference
+        android:key="@string/pref_mob_phone_key"
+        android:title="@string/pref_mob_phone_title" />
+</PreferenceScreen>

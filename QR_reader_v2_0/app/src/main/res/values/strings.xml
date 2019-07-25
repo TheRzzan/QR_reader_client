@@ -1,3 +1,39 @@
 <resources>
-    <string name="app_name">QR_reader_v2_0</string>
+    <string name="app_name" translatable="false">QR reader</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="tab_title_info">Info</string>
+    <string name="tab_title_profile">Profile</string>
+    <string name="no_info">No information</string>
+
+    <!-- Preferences -->
+    <string name="pref_name_key" translatable="false">pref_name</string>
+    <string name="pref_name_title">Name</string>
+
+    <string name="pref_age_key" translatable="false">pref_age</string>
+    <string name="pref_age_title">Age</string>
+
+    <string name="pref_id_key" translatable="false">pref_id</string>
+    <string name="pref_id_title" translatable="false">Id</string>
+
+    <string name="pref_code_ticket_key" translatable="false">pref_code_ticket</string>
+    <string name="pref_code_ticket_title">Code</string>
+
+    <string name="pref_date_key" translatable="false">pref_date</string>
+    <string name="pref_date_title">Date</string>
+
+    <string name="pref_promo_key" translatable="false">pref_promo</string>
+    <string name="pref_promo_title">Promo</string>
+
+    <string name="pref_uni_key" translatable="false">pref_uni</string>
+    <string name="pref_uni_title" translatable="false">UNI</string>
+
+    <string name="pref_event_key" translatable="false">pref_event</string>
+    <string name="pref_event_title">Event</string>
+
+    <string name="pref_date_event_key" translatable="false">pref_date_event</string>
+    <string name="pref_date_event_title">Date event</string>
+
+    <string name="pref_mob_phone_key" translatable="false">pref_mob_phone</string>
+    <string name="pref_mob_phone_title">Mob phone</string>
 </resources>

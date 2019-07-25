@@ -1,0 +1,24 @@
+<resources>
+    <string name="action_settings">Настройки</string>
+    <string name="action_about">О программе</string>
+    <string name="tab_title_info">Информация</string>
+    <string name="tab_title_profile">Профиль</string>
+    <string name="no_info">Нет информации</string>
+
+    <!-- Preferences -->
+    <string name="pref_name_title">Имя</string>
+
+    <string name="pref_age_title">Возраст</string>
+
+    <string name="pref_code_ticket_title">Код</string>
+
+    <string name="pref_date_title">Дата</string>
+
+    <string name="pref_promo_title">Промо</string>
+
+    <string name="pref_event_title">Событие</string>
+
+    <string name="pref_date_event_title">Дата события</string>
+
+    <string name="pref_mob_phone_title">Телефон</string>
+</resources>

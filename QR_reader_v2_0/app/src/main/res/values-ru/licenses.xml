@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dialog_title_licenses">Лицензия</string>
+    <string name="licenses_author">Морозов Евгений</string>
+    <string name="licenses_content">Программа позволяющая получать информацию о билете через QR код.</string>
+</resources>
